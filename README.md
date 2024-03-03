@@ -5,7 +5,10 @@ This was the project I build in year 2021, where my focus was on exploring the p
 
 ## Demo
 
-https://github.com/ShantanuPatil001/VisionNavigator/blob/main/TestVideo.mov 
+
+https://github.com/ShantanuPatil001/VisionNavigator/assets/104734249/c8005d0e-ed78-4be6-8f27-52eab7b89f88
+
+**This video is a of a NYC street. Blue block show obstrction and red show the paths to follow. Its kind of opposite**
 
 ## Installation
 
