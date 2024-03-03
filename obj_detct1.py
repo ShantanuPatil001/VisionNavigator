@@ -1,28 +1,35 @@
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-import pyttsx3
+# import pyttsx3
 import threading
+import sys, os
 
 
-engine = pyttsx3.init()
-
-def speak(text):
-    try:
-        voices = engine.getProperty('voices')
-        engine.setProperty('voice', 'voices[0].id')
-        engine.setProperty('rate', 150)
-        engine.say(text)
-        engine.runAndWait()
-    except Exception as e:
-        xy = 'true'
 
 
-t = threading.Thread(target=speak,args=("Hello",))
-t.start()
+# engine = pyttsx3.init()
+
+# def speak(text):
+#     try:
+#         voices = engine.getProperty('voices')
+#         engine.setProperty('voice', 'voices[0].id')
+#         engine.setProperty('rate', 150)
+#         engine.say(text)
+#         engine.runAndWait()
+#     except Exception as e:
+#         xy = 'true'
+
+
+# t = threading.Thread(target=speak,args=("Hello",))
+# t.start()
+# def process(text1):
+#     t = threading.Thread(target=speak,args=(text1,))
+#     t.start()
+
 def process(text1):
-    t = threading.Thread(target=speak,args=(text1,))
-    t.start()
+    os.system('clear')
+    print(text1)
 
 def ObjectDetection():
 
@@ -88,7 +95,6 @@ def ObjectDetection():
         rectangles = []
         intersecting = []
         for i in indices:
-            i = i[0]
             box = bbox[i]
             x, y, w, h = box[0], box[1], box[2], box[3]
             cv2.rectangle(img, (x, y), (x + w, h + y), color=(0, 255, 0), thickness=0)

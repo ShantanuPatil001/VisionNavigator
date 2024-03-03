@@ -1,0 +1,5 @@
+easyocr==1.7.1
+matplotlib==3.8.3
+numpy==1.26.4
+pyttsx3==2.90
+Requests==2.31.0
